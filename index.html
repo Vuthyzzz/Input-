@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="mention">
+        <h1>Input Data</h1>
+        <nav class="box">
+
+            <nav class="max-group">
+                <label for="" class="font"> ពិន្ទុគណិត</label>
+
+                <input type="text" class="chack" id="form">
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font"> ពិន្ទុរូប</label>
+
+                <input type="text" class="chack" id="form">
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font"> ពិន្ទុគីមី</label>
+
+                <input type="text" class="chack" id="form">
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font"> ពិន្ទុខ្មែរ</label>
+
+                <input type="text" class="chack" id="form">
+
+            </nav>
+            <input type="button" class="find" value="SAVE" onclick="calAdd()" />
+
+            <nav class="max-group">
+                <label for="" class="font1"> ពិន្ទុសរុប</label>
+
+                <input type="text" class="chack1" id="formx">
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font1"> មធ្យមភាគ</label>
+                
+                <input type="text" class="chack1" id="formx1">
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font1" id="formz1"> និទ្ធេស</label>
+
+                <P id="formy"></P>
+
+                
+            </nav>
+
+        </nav>
+
+
+
+    </nav>
+
+
+
+    <script>
+        function calAdd() {
+            var a, b, c, d, total, average;
+            a = parseFloat(document.getElementById("form").value);
+            b = parseFloat(document.getElementById("form").value);
+            c = parseFloat(document.getElementById("form").value);
+            d = parseFloat(document.getElementById("form").value);
+
+
+            total = a + b + c + d;
+            average = total / 4;
+            document.getElementById("formx").value = total;
+            document.getElementById("formx1").value = average;
+
+
+            if (average >= 90) {
+                document.getElementById("formy").innerHTML = "A";
+            } else if (average >= 80) {
+                document.getElementById("formy").innerHTML = "B";
+            } else if (average >= 70) {
+                document.getElementById("formy").innerHTML = "C";
+            } else if (average >= 60) {
+                document.getElementById("formy").innerHTML = "D";
+            } else if (average >= 50) {
+                document.getElementById("formy").innerHTML = "E";
+            } else {
+                document.getElementById("formy").innerHTML = "F";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
